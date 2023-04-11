@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "845319062508",
+    "project_id": "mobilehealthbreaths",
+    "storage_bucket": "mobilehealthbreaths.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845319062508:android:74c82098c6ea3686b476c9",
+        "android_client_info": {
+          "package_name": "com.example.mobilehealth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "845319062508-3uq97ndp086vcpi2n9g89j0ccc3ftsp8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvY_er75YXR1X8tEsgrqwyzxEv9oBdIm0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "845319062508-3uq97ndp086vcpi2n9g89j0ccc3ftsp8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

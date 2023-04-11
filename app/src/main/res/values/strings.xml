@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name" translatable="false">MobileHealth</string>
+    <string name="main_page">Main</string>
+    <string name="profile_page">Profile</string>
+    <string name="meds_page">Medicals</string>
+    <string name="pfc_page">PFC</string>
+    <string name="protein_tv">Proteins:</string>
+    <string name="fat_tv">Fats:</string>
+    <string name="carbs_tv">Carbs:</string>
+    <string name="protein_et">Proteins...</string>
+    <string name="fat_et">Fats...</string>
+    <string name="carbs_et">Carbs...</string>
+    <string name="add_bt">Add</string>
+    <string name="height_et">Height...</string>
+    <string name="weight_et">Weight...</string>
+    <string name="date_birth_et">Date of birth...</string>
+    <string name="steps_today_et">Steps today</string>
+    <string name="of_et">of</string>
+    <string name="achiv_1_et">You meet the goal for</string>
+    <string name="achiv_2_et">days in row!</string>
+    <string name="full_body_workout_title">Full body</string>
+    <string name="full_body_workout_short_description">Other muscles: none</string>
+    <string name="breast_workout_title">Breast</string>
+    <string name="breast_workout_short_description">Other muscles: shoulders, triceps</string>
+    <string name="back_workout_title">Back</string>
+    <string name="back_workout_short_description">Other muscles: biceps, forearms</string>
+    <string name="abs_workout_title">ABS</string>
+    <string name="abs_workout_short_description">Other muscles: legs</string>
+    <string name="legs_workout_title">Legs</string>
+    <string name="legs_workout_short_description">Other muscles: lower back</string>
+    <string name="wrp_page">Water regime</string>
+    <string name="steps_page">Steps</string>
+    <string name="bt_page">Breath Technics</string>
+    <string name="workout_page">Workout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

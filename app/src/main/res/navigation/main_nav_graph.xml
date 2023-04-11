@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.mobilehealth.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_workoutFragment2"
+            app:destination="@id/workoutFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_profileFragment2"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_medsFragment2"
+            app:destination="@id/medsFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_PFCFragment2"
+            app:destination="@id/PFCFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_stepsFragment"
+            app:destination="@id/stepsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_breathTechnicFragment"
+            app:destination="@id/breathTechnicFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.mobilehealth.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PFCFragment2"
+        android:name="com.example.mobilehealth.PFCFragment"
+        android:label="PFCFragment" />
+    <fragment
+        android:id="@+id/medsFragment2"
+        android:name="com.example.mobilehealth.MedsFragment"
+        android:label="MedsFragment" />
+    <fragment
+        android:id="@+id/workoutFragment2"
+        android:name="com.example.mobilehealth.WorkoutFragment"
+        android:label="fragment_workout"
+        tools:layout="@layout/fragment_workout" />
+    <fragment
+        android:id="@+id/stepsFragment"
+        android:name="com.example.mobilehealth.StepsFragment"
+        android:label="fragment_steps"
+        tools:layout="@layout/fragment_steps" />
+    <fragment
+        android:id="@+id/breathTechnicFragment"
+        android:name="com.example.mobilehealth.BreathTechnicFragment"
+        android:label="fragment_breath_technic"
+        tools:layout="@layout/fragment_breath_technic" />
+</navigation>

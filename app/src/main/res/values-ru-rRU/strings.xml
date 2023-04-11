@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="main_page">Главная</string>
+    <string name="profile_page">Профиль</string>
+    <string name="meds_page">Лекарства</string>
+    <string name="pfc_page">БЖУ</string>
+    <string name="protein_tv">Белки:</string>
+    <string name="fat_tv">Жиры:</string>
+    <string name="carbs_tv">Угдеводы:</string>
+    <string name="protein_et">Белки...</string>
+    <string name="fat_et">Жиры...</string>
+    <string name="carbs_et">Углеводы...</string>
+    <string name="add_bt">Добавить</string>
+    <string name="height_et">Рост...</string>
+    <string name="weight_et">Вес...</string>
+    <string name="date_birth_et">Дата рождения...</string>
+    <string name="steps_today_et">Шагов сегодня</string>
+    <string name="of_et">из</string>
+    <string name="achiv_1_et">Вы соблюдаете цель</string>
+    <string name="achiv_2_et">день подряд!</string>
+    <string name="full_body_workout_title">Все тело</string>
+    <string name="full_body_workout_short_description">Другие мышцы: нет</string>
+    <string name="breast_workout_title">Грудь</string>
+    <string name="breast_workout_short_description">Другие мышцы: плечи, трицепсы</string>
+    <string name="back_workout_title">Спина</string>
+    <string name="back_workout_short_description">Другие мышцы: бицепсы, предплечья</string>
+    <string name="abs_workout_title">Кор</string>
+    <string name="abs_workout_short_description">Другие мышцы: ноги</string>
+    <string name="legs_workout_title">Ноги</string>
+    <string name="legs_workout_short_description">Другие мышцы: поясница</string>
+    <string name="wrp_page">Водный режим</string>
+    <string name="steps_page">Шаги</string>
+    <string name="bt_page">Дыхательные техники</string>
+    <string name="workout_page">Тренировки</string>
+</resources>
