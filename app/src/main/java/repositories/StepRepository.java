@@ -1,6 +1,7 @@
 package repositories;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -23,6 +24,7 @@ public class StepRepository {
     public void SaveStepsData(StepData data){
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String gsonFormat = gson.toJson(data);
+        Log.e("json", gsonFormat);
         try {
             FileOutputStream outputStream = context.openFileOutput(FILE_PATH, Context.MODE_PRIVATE);
             outputStream.write(gsonFormat.getBytes());

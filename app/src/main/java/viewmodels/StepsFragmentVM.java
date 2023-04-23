@@ -16,13 +16,16 @@ import androidx.core.content.ContextCompat;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import models.StepData;
 import repositories.StepRepository;
 
 public class StepsFragmentVM extends ViewModel implements SensorEventListener {
 
-    public MutableLiveData<Integer> stepCount = new MutableLiveData<Integer>();
-    public MutableLiveData<Integer> stepsToday = new MutableLiveData<Integer>();
+    public MutableLiveData<Integer> stepCount = new MutableLiveData<Integer>(17);
+    public MutableLiveData<Integer> stepsToday = new MutableLiveData<Integer>(0);
     private int previousSteps = 0;
     private Activity context;
 
@@ -36,15 +39,14 @@ public class StepsFragmentVM extends ViewModel implements SensorEventListener {
         repository = new StepRepository(context);
         if (repository.LoadStepsData() != null) {
             stepData = repository.LoadStepsData();
+            stepCount.setValue(stepData.getTotalSteps());
         }
         else
             stepData = new StepData();
         Log.e("steps", String.valueOf(stepData.getTotalSteps()));
+        Toast.makeText(context, "stepsData:" + String.valueOf(stepData.getTotalSteps()), Toast.LENGTH_SHORT).show();
         if(ContextCompat.checkSelfPermission(context, android.Manifest.permission.ACTIVITY_RECOGNITION) == PackageManager.PERMISSION_DENIED){
             ActivityCompat.requestPermissions(context, new String[] {Manifest.permission.ACTIVITY_RECOGNITION}, 1);
-        }
-        else{
-            Log.e("error", "error");
         }
         sensorManager = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
         stepSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
@@ -59,7 +61,10 @@ public class StepsFragmentVM extends ViewModel implements SensorEventListener {
 
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
-        stepCount.setValue((int) sensorEvent.values[0]);
+        if(sensorEvent.values[0] == 0)
+            sensorEvent.values[0] = stepData.getTotalSteps();
+        Toast.makeText(context, "sensorEvent: " + String.valueOf(sensorEvent.values[0]), Toast.LENGTH_SHORT).show();
+        stepCount.setValue((int) sensorEvent.values[0] + stepData.getTotalSteps());
     }
 
     @Override
@@ -67,10 +72,16 @@ public class StepsFragmentVM extends ViewModel implements SensorEventListener {
 
     }
 
-    @Override
-    protected void onCleared() {
+    public void saveData(){
         stepData.setTotalSteps(stepCount.getValue());
         repository.SaveStepsData(stepData);
+        Log.e("data", "saved");
+        Log.e("stepCount", String.valueOf(stepCount.getValue()));
+    }
+
+    @Override
+    public void onCleared() {
+        Log.e("step viewmodel", "cleared");
         super.onCleared();
     }
 }

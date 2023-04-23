@@ -56,4 +56,17 @@ public class StepsFragment extends Fragment {
         });
         return view;
     }
+
+    @Override
+    public void onStop() {
+        Log.e("stop", "cleared");
+        vm.saveData();
+        super.onStop();
+    }
+
+    @Override
+    public void onDestroy() {
+        Log.e("destroy", "cleared");
+        super.onDestroy();
+    }
 }
