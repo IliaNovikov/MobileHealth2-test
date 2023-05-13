@@ -14,6 +14,7 @@ import java.io.InputStreamReader;
 import models.StepData;
 
 public class StepRepository {
+    //путь к файлу с данными о шагах
     private final String FILE_PATH = "steps.json";
     private Context context;
 
@@ -21,6 +22,7 @@ public class StepRepository {
         this.context = context;
     }
 
+    //сохранение данных в json
     public void SaveStepsData(StepData data){
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String gsonFormat = gson.toJson(data);
@@ -32,6 +34,8 @@ public class StepRepository {
             e.printStackTrace();
         }
     }
+
+    //извлечение данных из json
     public StepData LoadStepsData(){
         try(FileInputStream input = context.openFileInput(FILE_PATH);
             InputStreamReader reader = new InputStreamReader(input))

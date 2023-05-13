@@ -100,4 +100,10 @@ public class MainActivity extends AppCompatActivity {
         menu = findViewById(R.id.bottomNavigationView);
 //        vm = new ViewModelProvider(this).get(MainActivityVM.class);
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+    }
 }
