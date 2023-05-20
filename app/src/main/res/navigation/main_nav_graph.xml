@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_mainFragment_to_breathTechnicFragment"
             app:destination="@id/breathTechnicFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_waterRegimeFragment"
+            app:destination="@id/waterRegimeFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -50,7 +53,11 @@
         android:id="@+id/workoutFragment2"
         android:name="com.example.mobilehealth.WorkoutFragment"
         android:label="fragment_workout"
-        tools:layout="@layout/fragment_workout" />
+        tools:layout="@layout/fragment_workout" >
+        <action
+            android:id="@+id/action_workoutFragment2_to_workoutExercisesFragment2"
+            app:destination="@id/workoutExercisesFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/stepsFragment"
         android:name="com.example.mobilehealth.StepsFragment"
@@ -61,4 +68,13 @@
         android:name="com.example.mobilehealth.BreathTechnicFragment"
         android:label="fragment_breath_technic"
         tools:layout="@layout/fragment_breath_technic" />
+    <fragment
+        android:id="@+id/waterRegimeFragment"
+        android:name="com.example.mobilehealth.WaterRegimeFragment"
+        android:label="WaterRegimeFragment" />
+    <fragment
+        android:id="@+id/workoutExercisesFragment2"
+        android:name="com.example.mobilehealth.WorkoutExercisesFragment"
+        android:label="fragment_workout_exercises"
+        tools:layout="@layout/fragment_workout_exercises" />
 </navigation>
