@@ -8,10 +8,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class MedsFragment extends Fragment{
+public class WorkoutExercisesFragment extends Fragment {
+
+    public WorkoutExercisesFragment() {
+        // Required empty public constructor
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_meds, container, false);
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_workout_exercises, container, false);
     }
 }

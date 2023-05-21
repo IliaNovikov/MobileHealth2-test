@@ -9,7 +9,7 @@
 
 </LinearLayout>
 
-    <ProgressBar android:layout_height="wrap_content" android:layout_width="match_parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="40dp" android:layout_marginLeft="40dp" android:id="@+id/pbWater" app:layout_constraintTop_toBottomOf="@id/llWaterCounter" android:progressDrawable="@drawable/progress_drawable_blue" android:progress="30" style="?android:attr/progressBarStyleHorizontal"/>
+    <ProgressBar android:layout_height="wrap_content" android:layout_width="match_parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="40dp" android:layout_marginLeft="40dp" android:id="@+id/pbWater" app:layout_constraintTop_toBottomOf="@id/llWaterCounter" android:progress="30" style="?android:attr/progressBarStyleHorizontal"/>
 
 
     -<LinearLayout android:layout_height="wrap_content" android:layout_width="0dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" android:orientation="horizontal" android:layout_marginTop="40dp" android:id="@+id/llWaterSelection" app:layout_constraintTop_toBottomOf="@id/llWaterCounter">

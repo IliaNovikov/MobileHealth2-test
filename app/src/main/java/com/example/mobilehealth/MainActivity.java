@@ -10,6 +10,7 @@ import androidx.navigation.Navigation;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.TextView;
@@ -98,5 +99,11 @@ public class MainActivity extends AppCompatActivity {
         toolbarMain = findViewById(R.id.toolbar);
         menu = findViewById(R.id.bottomNavigationView);
 //        vm = new ViewModelProvider(this).get(MainActivityVM.class);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
     }
 }

@@ -56,6 +56,7 @@ public class MainFragment extends Fragment {
                         ((MainActivity)getActivity()).navController.navigate(R.id.action_mainFragment_to_PFCFragment2);
                         break;
                     case 1:
+                        ((MainActivity)getActivity()).navController.navigate(R.id.action_mainFragment_to_waterRegimeFragment);
                         break;
                     case 2:
                         ((MainActivity)getActivity()).navController.navigate(R.id.action_mainFragment_to_stepsFragment);
