@@ -46,5 +46,8 @@
     <string name="any">Любое</string>
     <string name="specific">Конкретное</string>
     <string name="empty_fields">Все поля должны быть заполнены</string>
-    <string name="days_remaining">Дней осталось</string>
+    <string name="days_remaining">До:</string>
+    <string name="medical_type">Тип лекарства:</string>
+    <string name="successful_save">Данные успешно сохранены</string>
+    <string name="med_type">Тип лекарства:</string>
 </resources>

@@ -76,6 +76,7 @@
                 android:backgroundTintMode="src_in"
                 android:breakStrategy="simple"
                 android:ems="10"
+                android:enabled="false"
                 android:fontFamily="@font/candara"
                 android:hint="@string/date_birth_et"
                 android:inputType="date"

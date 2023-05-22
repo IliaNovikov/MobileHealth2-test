@@ -59,5 +59,8 @@
     <string name="any">Any</string>
     <string name="specific">Specific</string>
     <string name="empty_fields">All fields should be filled</string>
-    <string name="days_remaining">Days remaining:</string>
+    <string name="days_remaining">Till:</string>
+    <string name="medical_type">Medical type:</string>
+    <string name="successful_save">Data sucessful saved</string>
+    <string name="med_type">Medical type:</string>
 </resources>
