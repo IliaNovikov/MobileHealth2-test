@@ -14,6 +14,10 @@ import com.example.mobilehealth.adapters.WorkoutAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+import globalvalues.GlobalValues;
+import interfaces.OnSectionClickInterface;
+import interfaces.OnWorkoutClickInterface;
+import models.Section;
 import models.Workout;
 
 public class WorkoutFragment extends Fragment {
@@ -39,7 +43,30 @@ public class WorkoutFragment extends Fragment {
     private void init(){
         rvWorkout = view.findViewById(R.id.rvWorkout);
         workouts = new ArrayList<>();
-        workoutAdapter = new WorkoutAdapter(getContext(), workouts);
+        OnWorkoutClickInterface onWorkoutClickInterface = new OnWorkoutClickInterface() {
+            @Override
+            public void onClick(Workout section, int position) {
+                switch(position){
+                    case 0:
+
+                        break;
+                    case 1:
+                        GlobalValues.ExerciseType = "breast";
+                        ((MainActivity)getActivity()).navController.navigate(R.id.action_workoutFragment2_to_workoutExercisesFragment2);
+                        break;
+                    case 2:
+
+                        break;
+                    case 3:
+
+                        break;
+                    case 4:
+
+                        break;
+                }
+            }
+        };
+        workoutAdapter = new WorkoutAdapter(getContext(), workouts, onWorkoutClickInterface);
     }
 
     private void listInitialization(){

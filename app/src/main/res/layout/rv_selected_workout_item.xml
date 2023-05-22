@@ -3,32 +3,55 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="80dp"
-    android:layout_marginTop="10dp">
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/ivSelectedWorkoutItem"
-        android:layout_width="120dp"
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:background="?android:attr/listDivider"
+        android:clickable="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/abs_img" />
+        android:layout_weight="1">
 
-    <TextView
-        android:id="@+id/tvSelectedWorkoutItemTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:fontFamily="@font/candara"
-        android:gravity="center"
-        android:text="Title" />
+        <ImageView
+            android:id="@+id/ivSelectedWorkoutItem"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/abs_img" />
 
-    <TextView
-        android:id="@+id/tvSelectedWorkoutItemCount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        <TextView
+            android:id="@+id/tvSelectedWorkoutItemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/candara"
+            android:gravity="center"
+            android:text="Title" />
+
+        <TextView
+            android:id="@+id/tvSelectedWorkoutItemCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/candara"
+            android:gravity="center"
+            android:text="Count" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
         android:layout_weight="1"
-        android:fontFamily="@font/candara"
-        android:gravity="center"
-        android:text="Count" />
+        android:background="?android:attr/listDivider" />
+
 </LinearLayout>

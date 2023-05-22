@@ -16,6 +16,7 @@ import org.w3c.dom.Text;
 
 import java.util.List;
 
+import interfaces.OnSectionClickInterface;
 import models.Exercise;
 
 public class SelectedWorkoutExerciseAdapter extends RecyclerView.Adapter<SelectedWorkoutExerciseAdapter.ViewHolder> {
@@ -39,7 +40,7 @@ public class SelectedWorkoutExerciseAdapter extends RecyclerView.Adapter<Selecte
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Exercise exercise = exercises.get(position);
         holder.tvTitle.setText(exercise.getTitle());
-        holder.tvCount.setText(exercise.getCount());
+        holder.tvCount.setText(String.valueOf(exercise.getCount()));
         holder.ivExercise.setImageResource(exercise.getExerciseImage());
     }
 

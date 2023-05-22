@@ -2,8 +2,9 @@ package models;
 
 public class Exercise {
     private String title;
-    private String count;
+    private int count;
     private int ExerciseImage;
+    private String level;
 
     public String getTitle() {
         return title;
@@ -13,11 +14,11 @@ public class Exercise {
         this.title = title;
     }
 
-    public String getCount() {
+    public int getCount() {
         return count;
     }
 
-    public void setCount(String count) {
+    public void setCount(int count) {
         this.count = count;
     }
 
@@ -29,9 +30,18 @@ public class Exercise {
         ExerciseImage = exerciseImage;
     }
 
-    public Exercise(String title, String count, int exerciseImage) {
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
+    }
+
+    public Exercise(String title, int count, int exerciseImage, String level) {
         this.title = title;
         this.count = count;
         ExerciseImage = exerciseImage;
+        this.level = level;
     }
 }

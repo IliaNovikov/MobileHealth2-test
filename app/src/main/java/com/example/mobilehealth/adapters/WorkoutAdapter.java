@@ -14,16 +14,19 @@ import com.example.mobilehealth.R;
 
 import java.util.List;
 
+import interfaces.OnWorkoutClickInterface;
 import models.Workout;
 
 public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.ViewHolder> {
 
     private LayoutInflater inflater;
     private List<Workout> workouts;
+    private OnWorkoutClickInterface onWorkoutClickInterface;
 
-    public WorkoutAdapter(Context context, List<Workout> workouts) {
+    public WorkoutAdapter(Context context, List<Workout> workouts, OnWorkoutClickInterface onWorkoutClickInterface) {
         this.inflater = LayoutInflater.from(context);
         this.workouts = workouts;
+        this.onWorkoutClickInterface = onWorkoutClickInterface;
     }
 
     @NonNull
@@ -39,6 +42,12 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.ViewHold
         holder.tvTitle.setText(workout.getTitle());
         holder.tvShortDescription.setText(workout.getShortDescription());
         holder.ivImage.setImageResource(workout.getImg());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onWorkoutClickInterface.onClick(workout, position);
+            }
+        });
     }
 
     @Override
