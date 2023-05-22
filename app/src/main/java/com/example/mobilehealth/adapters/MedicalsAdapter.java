@@ -22,10 +22,12 @@ public class MedicalsAdapter extends RecyclerView.Adapter<MedicalsAdapter.ViewHo
 
     private LayoutInflater inflater;
     private List<Medical> meds;
+    private Context context;
 
     public MedicalsAdapter(Context context, List<Medical> meds){
         this.inflater = LayoutInflater.from(context);
         this.meds = meds;
+        this.context = context;
     }
 
     @NonNull
@@ -38,9 +40,9 @@ public class MedicalsAdapter extends RecyclerView.Adapter<MedicalsAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull MedicalsAdapter.ViewHolder holder, int position) {
         Medical medical = meds.get(position);
-        holder.tvMedName.setText(medical.getMedName());
-        holder.tvMedReceptionTime.setText(medical.getReceptionTime());
-        holder.tvMedReceptionDuration.setText(medical.getReceptionDuration());
+        holder.tvMedName.setText(context.getString(R.string.med_name) + " " + medical.getMedName());
+        holder.tvMedReceptionTime.setText(context.getString(R.string.reception_time) + " " + medical.getReceptionTime());
+        holder.tvMedReceptionDuration.setText(context.getString(R.string.course_duration) + " " + medical.getReceptionDuration());
         holder.tvMedsRemainingDays.setText(medical.getReceptionDaysRemaining());
         holder.ivMedsType.setImageResource(medical.getImg());
     }
