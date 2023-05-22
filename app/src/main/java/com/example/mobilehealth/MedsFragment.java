@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -33,7 +34,7 @@ public class MedsFragment extends Fragment{
     private MedsFragmentVM vm;
     private RecyclerView rvMeds;
     private Button btnAddMeds;
-    private List<Medical> medicals = new ArrayList<>();
+    private List<Medical> medicals2 = new ArrayList<>();
 
     private String receptionTime;
     Dialog dialog;
@@ -43,7 +44,14 @@ public class MedsFragment extends Fragment{
         view = inflater.inflate(R.layout.fragment_meds, container, false);
         vm = new ViewModelProvider(getActivity(), new MedsFragmentVMFactory(getActivity())).get(MedsFragmentVM.class);
         init();
-        MedicalsAdapter adapter = new MedicalsAdapter(getContext(), medicals);
+        vm.loadData();
+        vm.medicals.observe(getActivity(), new Observer<ArrayList<Medical>>() {
+            @Override
+            public void onChanged(ArrayList<Medical> medicals) {
+                medicals2 = medicals;
+            }
+        });
+        MedicalsAdapter adapter = new MedicalsAdapter(getContext(), medicals2);
         btnAddMeds.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,8 +98,11 @@ public class MedsFragment extends Fragment{
         btnSaveMed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                medicals.add(new Medical(etMedName.getText().toString(), receptionTime, etDuration.getText().toString(), R.drawable.medicine));
+                medicals2.add(new Medical(etMedName.getText().toString(), receptionTime, etDuration.getText().toString(), R.drawable.medicine));
                 adapter.notifyDataSetChanged();
+                vm.medicals.setValue((ArrayList<Medical>) medicals2);
+                vm.saveData();
+                dialog.cancel();
             }
         });
         rvMeds.setAdapter(adapter);

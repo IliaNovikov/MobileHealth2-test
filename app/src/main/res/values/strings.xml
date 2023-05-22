@@ -63,4 +63,5 @@
     <string name="medical_type">Medical type:</string>
     <string name="successful_save">Data sucessful saved</string>
     <string name="med_type">Medical type:</string>
+    <string name="enter_data">Enter your data in profile</string>
 </resources>
