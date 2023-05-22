@@ -6,7 +6,7 @@
     <string name="pfc_page">БЖУ</string>
     <string name="protein_tv">Белки:</string>
     <string name="fat_tv">Жиры:</string>
-    <string name="carbs_tv">Угдеводы:</string>
+    <string name="carbs_tv">Углеводы:</string>
     <string name="protein_et">Белки...</string>
     <string name="fat_et">Жиры...</string>
     <string name="carbs_et">Углеводы...</string>
@@ -50,4 +50,5 @@
     <string name="medical_type">Тип лекарства:</string>
     <string name="successful_save">Данные успешно сохранены</string>
     <string name="med_type">Тип лекарства:</string>
+    <string name="enter_data">Введите ваши данные в профиль</string>
 </resources>

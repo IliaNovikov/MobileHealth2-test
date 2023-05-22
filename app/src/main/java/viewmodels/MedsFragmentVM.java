@@ -14,17 +14,19 @@ public class MedsFragmentVM extends ViewModel {
 
     private Activity contextActivity;
     public MutableLiveData<ArrayList<Medical>> medicals = new MutableLiveData<>();
-    MedicineRepository repository = new MedicineRepository(contextActivity);
+    MedicineRepository repository;
 
     public MedsFragmentVM(Activity contextActivity) {
         this.contextActivity = contextActivity;
-
+        repository = new MedicineRepository(contextActivity);
     }
     public void saveData(){
         repository.SaveMedicalData(medicals.getValue());
     }
     public void loadData(){
-
+        if(repository.LoadMedicalData() != null){
+            medicals.setValue(repository.LoadMedicalData());
+        }
     }
 
     @Override

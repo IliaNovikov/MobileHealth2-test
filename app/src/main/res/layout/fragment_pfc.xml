@@ -167,7 +167,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btAddPfc"
+        android:id="@+id/btnAddPfc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add_bt"
