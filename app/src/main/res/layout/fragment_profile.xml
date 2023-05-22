@@ -14,8 +14,8 @@
 
         <ImageButton
             android:id="@+id/btnSettings"
-            android:layout_width="30pt"
-            android:layout_height="30pt"
+            android:layout_width="28pt"
+            android:layout_height="26pt"
             android:layout_gravity="right"
 
             android:backgroundTint="#00196F49"
@@ -30,15 +30,28 @@
             android:orientation="vertical">
 
             <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#196F49"
+                android:ems="10"
+                android:fontFamily="@font/candara"
+                android:hint="@string/name"
+                android:inputType="text"
+                android:paddingTop="8pt"
+                android:textAlignment="center"
+                android:textColorHint="#A0A0A0" />
+
+            <EditText
                 android:id="@+id/etHeight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#196F49"
                 android:ems="10"
                 android:fontFamily="@font/candara"
+                android:hint="@string/height_et"
                 android:inputType="number"
-                android:paddingTop="20pt"
-                android:text="@string/height_et"
+                android:paddingTop="8pt"
                 android:textAlignment="center"
                 android:textColorHint="#A0A0A0" />
 
@@ -49,9 +62,9 @@
                 android:backgroundTint="#196F49"
                 android:ems="10"
                 android:fontFamily="@font/candara"
+                android:hint="@string/weight_et"
                 android:inputType="number"
-                android:paddingTop="20pt"
-                android:text="@string/weight_et"
+                android:paddingTop="8pt"
                 android:textAlignment="center"
                 android:textColorHint="#A1A1A1" />
 
@@ -64,19 +77,31 @@
                 android:breakStrategy="simple"
                 android:ems="10"
                 android:fontFamily="@font/candara"
+                android:hint="@string/date_birth_et"
                 android:inputType="date"
-                android:onClick="dateClick"
-                android:paddingTop="20pt"
-                android:text="@string/date_birth_et"
+                android:paddingTop="8pt"
                 android:textAlignment="center"
                 android:textColorHint="#A1A1A1" />
         </LinearLayout>
 
         <CalendarView
-            android:id="@+id/calendarView"
+            android:id="@+id/cvDateBirth"
             style="@android:style/Widget.DeviceDefault.CalendarView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="invisible" />
+            android:focusedMonthDateColor="#4CAF50"
+            android:selectedWeekBackgroundColor="#4CAF50"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#4CAF50"
+            android:gravity="center"
+            android:text="@string/save" />
+
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

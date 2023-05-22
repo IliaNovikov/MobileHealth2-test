@@ -32,4 +32,19 @@
     <string name="steps_page">Шаги</string>
     <string name="bt_page">Дыхательные техники</string>
     <string name="workout_page">Тренировки</string>
+    <string name="english">Английский</string>
+    <string name="russian">Русский</string>
+    <string name="localization">Локализация</string>
+    <string name="about_app">О приложении</string>
+    <string name="save">Сохранить</string>
+    <string name="close">Закрыть</string>
+    <string name="name">Имя...</string>
+    <string name="med_name">Название лекарства:</string>
+    <string name="reception_time">Время приема:</string>
+    <string name="course_duration">Длительность курса(в днях):</string>
+    <string name="time">Время:</string>
+    <string name="any">Любое</string>
+    <string name="specific">Конкретное</string>
+    <string name="empty_fields">Все поля должны быть заполнены</string>
+    <string name="days_remaining">Дней осталось</string>
 </resources>
